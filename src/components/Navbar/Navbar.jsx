@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
-import { FaGithub, FaLinkedin } from "react-icons/fa";// You can create this as a separate component
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
-  const [showAuthForm, setShowAuthForm] = useState(null); // Used to switch between SignIn and SignUp
+  const [showAuthForm, setShowAuthForm] = useState(null);
 
   const handleMenuItemClick = (sectionId) => {
     setActiveSection(sectionId);
@@ -18,28 +18,26 @@ const Navbar = () => {
     }
   };
 
-  // Remove two items for SignIn and SignUp
   const menuItems = [
     { id: "About", label: "About" },
     { id: "Contact", label: "Contact" },
-    { id: "SignIn", label: "Sign In" }, // New SignIn Item
-    { id: "SignUp", label: "Create Account" }, // New Create Account Item
+    { id: "SignIn", label: "Sign In" },
+    { id: "SignUp", label: "Create Account" },
   ];
 
   return (
     <div>
-      <nav className="fixed top-0 w-full z-50 px-[7vw] md:px-[7vw] lg:px-[20vw] bg-[#050414] bg-opacity-90 backdrop-blur-md shadow-md">
-        <div className="text-white py-5 flex justify-between items-center">
-          {/* Logo */}
-         <Link to={"/"}>
-         <div className="text-lg font-semibold cursor-pointer">
-            <span className="text-[#8245ec]">&lt;</span>
-            <span className="text-white">Nitin</span>
-            <span className="text-[#8245ec]">/</span>
-            <span className="text-white">Kumar</span>
-            <span className="text-[#8245ec]">&gt;</span>
-          </div>
-         </Link>
+      <nav className="fixed top-0 w-full z-50 px-6 md:px-8 lg:px-20 bg-[#050414] bg-opacity-90 backdrop-blur-md shadow-md pt-0">
+        <div className="text-white py-4 md:py-5 flex justify-between items-center">
+          <Link to={"/"}>
+            <div className="text-lg font-semibold cursor-pointer">
+              <span className="text-[#8245ec]">&lt;</span>
+              <span className="text-white">Nitin</span>
+              <span className="text-[#8245ec]">/</span>
+              <span className="text-white">Kumar</span>
+              <span className="text-[#8245ec]">&gt;</span>
+            </div>
+          </Link>
 
           {/* Desktop Menu */}
           <ul className="hidden md:flex space-x-8 text-gray-300">

@@ -4,7 +4,7 @@ const Hero = () => {
   const navigate = useNavigate(); // navigate hook le liya
 
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen py-12 sm:py-24 px-6 bg-[#0d081f]">
+    <section className="pb-[130px] flex flex-col items-center justify-center min-h-screen sm:py-24 px-2 bg-[#0d081f]">
       {/* Heading */}
       <div className="text-center mb-6 sm:mb-8">
         <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Welcome to PopX</h2>
