@@ -7,7 +7,7 @@ const SuccessSignin = () => {
   });
 
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen py-24 px-6 bg-[#0d081f]">
+    <section className=" flex flex-col items-center justify-center min-h-screen  pb-24 px-6 bg-[#0d081f]">
       {/* Account Settings heading */}
       <div className="text-center text-white text-3xl font-bold mb-8">Account Settings</div>
 
